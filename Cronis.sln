@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binary", "Binary\Binary.csproj", "{C84C09A4-973A-49A7-A51A-B54D35CF24FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "Test\Test.csproj", "{D733994B-A974-413C-B2CC-B171E9A547A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitoperations", "Bitoperations\Bitoperations.csproj", "{4C83CB22-DD9A-4365-9F31-C1EB93E43ACC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C84C09A4-973A-49A7-A51A-B54D35CF24FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84C09A4-973A-49A7-A51A-B54D35CF24FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84C09A4-973A-49A7-A51A-B54D35CF24FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84C09A4-973A-49A7-A51A-B54D35CF24FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D733994B-A974-413C-B2CC-B171E9A547A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D733994B-A974-413C-B2CC-B171E9A547A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D733994B-A974-413C-B2CC-B171E9A547A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D733994B-A974-413C-B2CC-B171E9A547A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C83CB22-DD9A-4365-9F31-C1EB93E43ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C83CB22-DD9A-4365-9F31-C1EB93E43ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C83CB22-DD9A-4365-9F31-C1EB93E43ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C83CB22-DD9A-4365-9F31-C1EB93E43ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
