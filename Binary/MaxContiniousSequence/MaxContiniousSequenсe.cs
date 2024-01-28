@@ -1,6 +1,6 @@
 namespace Binary;
 
-public class MaxContiniousSequenсe
+public partial class MaxContiniousSequenсe
 {
   public int GetMaxContiniousSequenсeWithNaive(int[] arr)
   {
@@ -47,12 +47,5 @@ public class MaxContiniousSequenсe
     int sizeForLastPosition = slidingWindow.End - slidingWindow.Start;
 
     return Math.Max(slidingWindow.Value, sizeForLastPosition);
-  }
-
-  public class SlidingWindow
-  {
-    public int Start { get; set; }
-    public int End { get; set; }
-    public int Value { get; set; }
   }
 }
