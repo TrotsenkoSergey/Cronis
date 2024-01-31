@@ -68,4 +68,28 @@ public static class Bits
 
   public static int SetBitOneInHighestRange(this int data, int range) =>
     (int)(~(~0u >>> range) | data);
+
+  // byte section
+  public static byte SetBitOneAt(this byte data, int index) =>
+    (byte)((byte)(1u << index) | data);
+
+  public static byte SetBitZeroAtLowestRange(this byte data, int range) =>
+    (byte)((~0u << range) & data);
+
+  public static byte SetBitOneInLowestRange(this byte data, int range) =>
+    (byte)(~(~0u << range) | data);
+
+  public static byte SetBitZeroInHighestRange(this byte data, int range)
+  {
+    uint shiftRight = ~0u >>> range;
+    byte reverseByte = (byte)(shiftRight >>> 24);
+    return (byte)(reverseByte & data);
+  }
+
+  public static byte SetBitOneInHighestRange(this byte data, int range)
+  {
+    uint startOnes = ~(~0u >>> range);
+    byte reverseByte = (byte)(startOnes >>> 24);
+    return (byte)(reverseByte | data);
+  }
 }

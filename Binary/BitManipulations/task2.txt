@@ -1,0 +1,18 @@
+Заполнить единицами индексы массива ячейки включительно:
+от { startBucket, startIndex } до { endBucket, endIndex }
+
+Пример 1.
+input: 
+byte[] arr = new byte[4];
+startBucket = 1; startIndex = 1;
+endBucket = 3; endIndex = 2;
+output:
+arr = { 00000000, 00000011, 11111111, 11111100 }
+
+Пример 2.
+input: 
+byte[] arr = new byte[4];
+startBucket = 1; startIndex = 2;
+endBucket = 1; endIndex = 2;
+output:
+arr = { 00000000, 00000100, 00000000, 00000000 }
