@@ -1,4 +1,4 @@
-namespace Binary;
+namespace Binary.Decimal;
 
 public class MaxContiniousSequenсeWithAdding
 {

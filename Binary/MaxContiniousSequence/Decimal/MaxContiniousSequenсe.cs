@@ -1,6 +1,6 @@
-namespace Binary;
+namespace Binary.Decimal;
 
-public partial class MaxContiniousSequenсe
+public class MaxContiniousSequenсe
 {
   public int GetMaxContiniousSequenсeWithNaive(int[] arr)
   {

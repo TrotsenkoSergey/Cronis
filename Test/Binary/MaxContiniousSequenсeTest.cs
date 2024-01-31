@@ -1,4 +1,4 @@
-using Binary;
+using Binary.Decimal;
 
 namespace Test.Binary;
 
