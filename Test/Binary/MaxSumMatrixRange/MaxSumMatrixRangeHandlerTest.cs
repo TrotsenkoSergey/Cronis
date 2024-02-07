@@ -1,6 +1,6 @@
-﻿using Bitoperations;
+﻿using Binary;
 
-namespace Test.Bitoperations;
+namespace Test.Binary;
 
 public class MaxSumMatrixRangeHandlerTest
 {

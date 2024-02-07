@@ -1,4 +1,4 @@
-﻿namespace Bitoperations;
+﻿namespace Binary;
 
 public record class MaxSumMatrixRange(
     int StartRow,
