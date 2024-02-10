@@ -1,4 +1,4 @@
-namespace Binary;
+namespace Binary.BitVectors;
 
 public class BitVector
 {
