@@ -2,31 +2,35 @@
 
 public class MyStack<T>
 {
-    private const int DefaultStackSize = 3;
-    private int _stackSize;
-    private int _stackArrow = -1;
+    private int _capacity;
     private T[] _stack;
+    private int _size;
+    private int _arrow;
     
-    public MyStack(int stackSize = DefaultStackSize)
+    public MyStack(int capacity)
     {
-        _stackSize = stackSize;
-        _stack = new T[_stackSize];
+        _capacity = capacity;
+        _stack = new T[capacity];
+        _size = 0;
+        _arrow = -1;
     }
 
-    public int Size => _stackSize;
-    public bool IsEmpty => _stackArrow == -1;
+    public int Capacity => _capacity;
+    public int Size => _size;
+    public bool IsEmpty => _size == 0;
+    public bool IsNotEmpty => _size > 0;
 
     public void Push(T value) 
     { 
-        if(_stackArrow == _stackSize - 1) 
+        if(_arrow == _capacity - 1) 
         { 
             throw new Exception("Stack overflow");
         }
         
-        _stackArrow++;
-        _stack[_stackArrow] = value;
-        
-        _stackSize++;
+        _arrow++;
+        _stack[_arrow] = value;
+
+        _size++;
     }
 
     public T Pop() 
@@ -36,14 +40,13 @@ public class MyStack<T>
             throw new Exception("Stack is empty");
         }
         
-        T value = _stack[_stackArrow];
-        _stackArrow--;
+        T value = _stack[_arrow];
+        _arrow--;
         
-        _stackSize--;
+        _size--;
 
         return value;
     }
-
 
     public T Peek() 
     {
@@ -52,6 +55,6 @@ public class MyStack<T>
             throw new Exception("Stack is empty");
         }
 
-        return _stack[_stackArrow];
+        return _stack[_arrow];
     }
 }

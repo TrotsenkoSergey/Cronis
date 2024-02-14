@@ -5,25 +5,18 @@ public class MinStackElement
     private readonly MyStack<int> _stack;
     private readonly MyStack<int> _stackWithMins;
 
-    public MinStackElement(int sizeOfStack)
+    public MinStackElement(int stackCapacity)
     {
-        _stack = new MyStack<int>(sizeOfStack);
-        _stackWithMins = new MyStack<int>(sizeOfStack);
+        _stack = new MyStack<int>(stackCapacity);
+        _stackWithMins = new MyStack<int>(stackCapacity);
     }
 
     public int Size => _stack.Size;
 
     public void Push(int value)
     {
-        if (!_stackWithMins.IsEmpty)
-        {
-            int minValue = _stackWithMins.Peek();
-            if (minValue >= value)
-            {
-                _stackWithMins.Push(value);
-            }
-        }
-        else
+        if (_stackWithMins.IsEmpty ||
+            _stackWithMins.IsNotEmpty && value <= _stackWithMins.Peek())
         {
             _stackWithMins.Push(value);
         }
@@ -35,7 +28,7 @@ public class MinStackElement
     {
         int value = _stack.Pop();
 
-        if (!_stackWithMins.IsEmpty)
+        if (_stackWithMins.IsNotEmpty)
         {
             int minValue = _stackWithMins.Peek();
             if (minValue == value)
