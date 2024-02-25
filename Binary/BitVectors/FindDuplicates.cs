@@ -20,7 +20,7 @@ public class FindDuplicates
     List<int> duplicates = [];
     foreach (int el in arr)
     {
-      bool bitIsSet = bitVector.GetBit(el);
+      bool bitIsSet = bitVector.IsBitSet(el);
       if (bitIsSet)
       {
         duplicates.Add(el);

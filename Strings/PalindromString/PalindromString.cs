@@ -1,9 +1,8 @@
-﻿
-namespace Strings;
+﻿namespace Strings;
 
 public class PalindromString
 {
-    public bool IsPermutationIfPalindrome(string str)
+    public bool IsPermutationOfPalindrome(string str)
     {
         bool[] lettersTable = new bool[26]; // всего 26 букв английского алфавита
         int oddLettersCount = 0;
